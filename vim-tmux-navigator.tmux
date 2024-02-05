@@ -18,8 +18,8 @@ tmux if-shell -b '[ "$(echo "$tmux_version < 3.0" | bc)" = 1 ]' \
 tmux if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
   "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
 
-tmux bind-key -T copy-mode-vi C-h select-pane -L
-tmux bind-key -T copy-mode-vi C-j select-pane -D
-tmux bind-key -T copy-mode-vi C-k select-pane -U
-tmux bind-key -T copy-mode-vi C-l select-pane -R
-tmux bind-key -T copy-mode-vi C-\\ select-pane -l
+tmux bind-key -T copy-mode-vi M-h select-pane -L
+tmux bind-key -T copy-mode-vi M-j select-pane -D
+tmux bind-key -T copy-mode-vi M-k select-pane -U
+tmux bind-key -T copy-mode-vi M-l select-pane -R
+tmux bind-key -T copy-mode-vi M-\\ select-pane -l
